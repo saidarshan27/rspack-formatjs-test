@@ -1,0 +1,32 @@
+{
+  "name": "rspacktest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run extract:locale && npm run compile:locale && rspack serve --config ./rspack.config.js",
+    "build": "npm run extract:locale && npm run compile:locale && rspack build --config ./rspack.config.js",
+    "extract:locale": "formatjs extract \"src/**/*.js*\" --ignore=\"src/{locales,compiled-locales}/**\" --out-file src/locales/en.json --id-interpolation-pattern \"[sha512:contenthash:base64:6]\"",
+    "compile:locale": "formatjs compile-folder --ast src/locales src/compiled-locales"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@formatjs/cli": "^6.2.15",
+    "@rspack/cli": "^1.0.8",
+    "@rspack/core": "1.0.10"
+  },
+  "dependencies": {
+    "@formatjs/swc-plugin": "^1.5.16",
+    "bootstrap": "^5.3.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.2",
+    "formatjs": "^0.1.1",
+    "html-webpack-plugin": "^5.6.0",
+    "node-sass": "^9.0.0",
+    "react": "^18.3.1",
+    "react-intl": "^6.8.0",
+    "sass-loader": "^16.0.2"
+  }
+}
