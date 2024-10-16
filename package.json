@@ -15,11 +15,10 @@
   "devDependencies": {
     "@formatjs/cli": "^6.2.15",
     "@rspack/cli": "^1.0.8",
-    "@rspack/core": "1.0.10"
+    "@rspack/core": "^1.0.11"
   },
   "dependencies": {
     "@formatjs/swc-plugin": "^1.5.16",
-    "@swc/core": "1.7.0",
     "bootstrap": "^5.3.3",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
